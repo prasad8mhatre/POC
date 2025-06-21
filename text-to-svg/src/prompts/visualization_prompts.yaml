@@ -1,0 +1,34 @@
+visualization_generation:
+  description: "Prompt for generating business-focused SVG visualizations from text"
+  prompt: |
+    Generate 5 different professional SVG visualizations suitable for business storytelling based on the following text. 
+    Each visualization should help communicate business concepts effectively and maintain a professional aesthetic.
+    
+    Consider these visualization types:
+    - Data-driven charts and graphs
+    - Process flows and diagrams
+    - Timeline visualizations
+    - Concept maps and hierarchies
+    - Icon-based infographics
+    
+    Return the response as a JSON array where each item has 'description' and 'svg_code' keys. 
+    The SVG code should be clean, properly formatted, and use a professional color scheme.
+
+    Text to visualize: {text}
+
+    Requirements:
+    - Use professional, business-appropriate colors (blues, grays, accent colors)
+    - Keep designs clean and minimalist
+    - Include clear labels and titles
+    - Ensure readability at different scales
+    - Use consistent styling across elements
+    - Avoid decorative elements that don't add meaning
+
+  expected_format: |
+    [
+      {
+        "description": "Brief description of the business visualization",
+        "svg_code": "Complete SVG code with professional styling"
+      },
+      ...
+    ] 

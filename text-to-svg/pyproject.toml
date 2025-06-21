@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "text-to-svg"
+version = "0.1.0"
+description = "An interactive document editor that generates SVG visualizations from text"
+requires-python = ">=3.9"
+dependencies = [
+    "streamlit",
+    "google-generativeai",
+    "python-dotenv",
+    "svgwrite",
+    "PyYAML",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.hatch.metadata]
+allow-direct-references = true 
