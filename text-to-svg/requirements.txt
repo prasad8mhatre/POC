@@ -4,3 +4,5 @@ python-dotenv
 svgwrite
 PyYAML
 rich>=13.7.0
+mcp
+mcp[cli]
